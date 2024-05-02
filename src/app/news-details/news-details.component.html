@@ -1,0 +1,21 @@
+@if (news) {
+  <div class="container mt-5 d-flex justify-content-start gap-5   " style="border: 2px solid #DDD;padding: 20px;">
+ 
+    <div style="width: 30%;">
+        <img width="100%" [src]="'data:' + news.contentType + ';base64, ' + news.imageData" alt=""  alt="">
+    </div>
+
+    <div style="width: 49%;" class=" ">
+      <p> <span class="h6">Title</span> :  {{news.title}} </p>
+      <p> <span class="h6">News</span> : {{news.newss}}</p>
+      <p> <span class="h6">Author Name</span> : {{news.authorName}}</p>
+      <p> <span class="h6">Creation Date</span> : {{news.creationDate | date}}</p>
+      <p> <span class="h6">Publication Date</span> : {{news.publicationDate | date}}</p>
+    </div>
+
+    <div>
+      <button class="btn btn-outline-primary " (click)="onBack()">Back</button>
+    </div>
+
+  </div>
+}
